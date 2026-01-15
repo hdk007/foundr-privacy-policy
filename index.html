@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | CoFoundr AI</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --bg-color: #0f172a; /* Dark Navy */
+            --card-bg: #1e293b;  /* Lighter Navy */
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #2dd4bf; /* Teal Accent */
+            --accent-hover: #14b8a6;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--text-primary), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Accordion Styles */
+        .policy-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .policy-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .policy-header:hover {
+            background-color: #283548;
+        }
+
+        .policy-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .policy-section.active .policy-header::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+
+        .policy-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+            color: var(--text-secondary);
+        }
+
+        .policy-section.active .policy-content {
+            padding: 0 20px 20px 20px;
+            max-height: 500px; /* Arbitrary height for animation */
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: <span id="date-placeholder"></span></p>
+            <p style="margin-top: 10px; color: var(--text-secondary);">Transparency is our priority at CoFoundr AI.</p>
+        </header>
+
+        <div class="policy-section active">
+            <div class="policy-header">1. Introduction</div>
+            <div class="policy-content">
+                <p>Welcome to <strong>CoFoundr AI</strong>. We respect your privacy and are committed to protecting the startup ideas, research queries, and personal data you share with our AI companion. This policy explains how we handle your data.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <div class="policy-header">2. Information We Collect</div>
+            <div class="policy-content">
+                <p>To provide you with high-quality brainstorming and research, we process the following:</p>
+                <ul>
+                    <li><strong>User Inputs:</strong> The text prompts, startup ideas, and questions you type into the chat.</li>
+                    <li><strong>Usage Data:</strong> Basic analytics (e.g., app crashes, feature usage) to improve performance.</li>
+                    <li><strong>Device Info:</strong> Minimal device identifiers required for app functionality.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <div class="policy-header">3. AI Processing & Third Parties</div>
+            <div class="policy-content">
+                <p>This application utilizes Large Language Models (LLMs) to generate responses.</p>
+                <p style="margin-top:10px;"><strong>Google Gemini API:</strong> Your chat inputs are sent to Google's servers for processing. We do not sell your startup ideas to third parties, but data processed by the API is subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <div class="policy-header">4. Data Retention</div>
+            <div class="policy-content">
+                <p>We believe in ephemeral brainstorming. We do not store your chat history permanently on our servers. Your chats are stored locally on your device. Once you clear your app data or delete the app, your brainstorming sessions are removed from your device.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <div class="policy-header">5. Contact Us</div>
+            <div class="policy-content">
+                <p>If you have questions about this policy or want to request data deletion, please contact our support team:</p>
+                <p style="margin-top:10px;">Email: <strong>support@cofoundr.ai</strong></p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="back-btn" onclick="window.close()">Close Policy</button>
+        </div>
+
+        <div class="footer-note">
+            &copy; 2024 CoFoundr AI. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        // JS FUNCTIONALITY
+
+        // 1. Set Current Date automatically
+        const dateSpan = document.getElementById('date-placeholder');
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateSpan.innerText = new Date().toLocaleDateString('en-US', options);
+
+        // 2. Accordion Logic
+        const headers = document.querySelectorAll('.policy-header');
+
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                
+                // Toggle the 'active' class
+                section.classList.toggle('active');
+
+                // Logic for smooth height animation
+                const content = section.querySelector('.policy-content');
+                if (section.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
+        // Initialize the first section as open
+        window.addEventListener('load', () => {
+            const firstContent = document.querySelector('.policy-section.active .policy-content');
+            if(firstContent) {
+                firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+            }
+        });
+    </script>
+</body>
+</html>
